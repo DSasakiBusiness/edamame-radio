@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edamame Radio — AI音楽ラジオ配信</title>
+<style>
+  :root { --ink:#e8e6e3; --dim:#a8a29e; --bg:#14110f; --card:#1d1a17; --line:#332e29; --accent:#7ec98f; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;
+         line-height:1.9; }
+  .wrap { max-width:760px; margin:0 auto; padding:56px 24px 80px; }
+  h1 { font-size:30px; margin:0 0 6px; letter-spacing:.02em; }
+  .tag { color:var(--accent); font-size:14px; margin-bottom:40px; }
+  h2 { font-size:19px; margin:44px 0 14px; padding-top:22px;
+       border-top:1px solid var(--line); }
+  h3 { font-size:15px; margin:24px 0 8px; color:var(--accent); }
+  p, li { color:var(--dim); font-size:15px; }
+  li { margin-bottom:6px; }
+  .card { background:var(--card); border:1px solid var(--line);
+          border-radius:10px; padding:20px 24px; margin:20px 0; }
+  a { color:var(--accent); }
+  footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line);
+           color:#6b645d; font-size:13px; }
+  .date { color:#6b645d; font-size:13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Edamame Radio</h1>
+  <div class="tag">AI音楽ラジオ配信 — 視聴者のリクエストから楽曲を生成する24時間ライブ</div>
+
+  <div class="card">
+    <p style="margin:0">YouTube上で24時間稼働しているAI音楽ラジオです。視聴者がライブチャットで曲をリクエストすると、AIがその場でオリジナル楽曲を生成して配信で再生します。MCのキャラクターが視聴者と会話し、話した内容を記憶して次回以降の応答に反映します。</p>
+  </div>
+
+  <h2>このアプリケーションについて</h2>
+  <p>本アプリケーションは配信運営者本人が自身のYouTubeチャンネルを運営するために使用する非公開のツールです。一般利用者向けに配布・提供されるサービスではありません。</p>
+
+  <h3>YouTube APIの利用範囲</h3>
+  <ul>
+    <li>自チャンネルのライブチャットメッセージの取得（<code>liveChatMessages.list</code>）</li>
+    <li>自チャンネルのライブ配信の作成・更新・終了（<code>liveBroadcasts</code>）</li>
+  </ul>
+  <p>検索（<code>search.list</code>）、他者チャンネルのデータ収集、動画のダウンロードは一切行いません。</p>
+
+  <h2>プライバシーポリシー</h2>
+  <p class="date">最終更新: 2026年9月19日</p>
+
+  <h3>取得する情報</h3>
+  <p>本アプリケーションは、配信中のYouTubeライブチャットに投稿されたメッセージについて、以下の情報を取得します。</p>
+  <ul>
+    <li>チャットメッセージの本文</li>
+    <li>投稿者の表示名およびYouTubeチャンネルID</li>
+    <li>投稿日時</li>
+  </ul>
+  <p>これらはYouTubeのライブチャット上で公開されている情報です。メールアドレス、パスワード、支払い情報などの非公開情報は取得しません。</p>
+
+  <h3>利用目的</h3>
+  <ul>
+    <li>配信中にMCキャラクターが視聴者へ返答するため</li>
+    <li>楽曲リクエストを受け付け、生成する楽曲の内容に反映するため</li>
+    <li>視聴者が再訪した際に、過去の会話を踏まえた応答をするため</li>
+  </ul>
+
+  <h3>保存と管理</h3>
+  <p>取得した情報は配信運営者が管理するローカル環境にのみ保存されます。第三者への提供、販売、外部サービスへの転送は行いません。広告目的での利用も行いません。</p>
+  <p>記憶として保存される内容は、視聴者が実際に投稿した文言を根拠として保持します。発言していない内容を推測して保存することはありません。</p>
+
+  <h3>削除の請求</h3>
+  <p>ご自身に関する保存内容の削除を希望される場合、ライブチャットで <code>!forget</code> と投稿してください。該当する記憶は削除されます。個別のご連絡をご希望の場合は下記の連絡先までお知らせください。</p>
+
+  <h3>Googleユーザーデータの取り扱い</h3>
+  <p>本アプリケーションによるGoogleユーザーデータの使用および他アプリへの移転は、限定使用要件を含む<a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API サービスのユーザーデータに関するポリシー</a>に準拠します。</p>
+
+  <h2>利用規約</h2>
+  <p class="date">最終更新: 2026年9月19日</p>
+
+  <h3>サービスの内容</h3>
+  <p>本サービスはYouTube上で提供されるAI音楽ラジオ配信です。視聴者は配信のライブチャットを通じて楽曲のリクエストおよびMCキャラクターとの会話に参加できます。</p>
+
+  <h3>禁止事項</h3>
+  <ul>
+    <li>他の視聴者または運営者に対する迷惑行為、差別的な発言</li>
+    <li>配信の運営を妨害する行為</li>
+    <li>法令に違反する内容の投稿</li>
+  </ul>
+
+  <h3>生成される楽曲について</h3>
+  <p>リクエストに基づいて生成される楽曲はAIによる自動生成物です。生成結果の内容、品質、特定の要望との一致は保証されません。楽曲の権利は配信運営者に帰属します。</p>
+
+  <h3>免責</h3>
+  <p>本サービスは無償で提供されます。配信の中断、記憶内容の消失、生成楽曲の内容について、運営者は責任を負いません。予告なくサービス内容を変更または終了する場合があります。</p>
+
+  <h3>YouTubeの規約</h3>
+  <p>本サービスの利用にあたっては、<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube 利用規約</a>および<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>も適用されます。</p>
+
+  <h2>お問い合わせ</h2>
+  <p>本サービスおよびデータの取り扱いに関するお問い合わせは、下記までご連絡ください。</p>
+  <div class="card">
+    <p style="margin:0">Edamame Radio 運営<br>
+    メール: teihen.casino.slots@gmail.com</p>
+  </div>
+
+  <footer>
+    Edamame Radio — 個人運営のAI音楽ラジオ配信<br>
+    本サイトは配信で使用するアプリケーションのポリシー掲示を目的としています。
+  </footer>
+
+</div>
+</body>
+</html>
